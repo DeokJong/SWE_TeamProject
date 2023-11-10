@@ -27,10 +27,10 @@ def is_valid_operator(operator : str) -> bool:
     - operator (str) : 문자열
 
     Returns:
-    - bool : 문자열이 유효한 연산자 (+, -, *, =)이면 True, 그렇지 않으면 False.
+    - bool : 문자열이 유효한 연산자 (+, -, *)이면 True, 그렇지 않으면 False.
     """
    
-    return operator in ('+', '-', '*', '=')
+    return operator in ('+', '-', '*')
 
 
 def is_valid_expression(expression : str) -> bool:
@@ -74,10 +74,3 @@ def print_error_message() -> None:
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
     """
     print("ERROR")
-
-
-print(is_valid_expression("1+2+3+4+5="))
-print(is_valid_expression("1*2*3*4*5="))
-print(is_valid_expression("1/2/3/4/5="))
-print(is_valid_expression("1-2-3-4-5="))
-print(is_valid_expression("1/2*3+2="))
