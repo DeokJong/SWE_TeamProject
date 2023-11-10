@@ -33,23 +33,51 @@ def is_valid_operator(operator : str) -> bool:
     return operator in ('+', '-', '*', '=')
 
 
-def is_valid_expression(num1 : str, operator : str, num2 : str) -> bool:
+def is_valid_expression(expression : str) -> bool:
     """
     매개변수로 들어온 계산식이 유효한 계산식인지 확인합니다.
 
     Parameters:
-    - num1 (str) : 첫 번째 피연산자.
-    - operator (str) : 연산자
-    - num2 (str) : 두 번째 피연산자.
+    - expression (str) : 계산식
 
     Returns:
     - bool : 계산식이 유효하면 True, 그렇지 않으면 False.
     """
     
-    return is_integer(num1) and is_valid_operator(operator) and is_integer(num2)
-       
+    currentOperator:str = ""
+    count = 0
+
+    for i in range(len(expression) - 1):
+        if count % 2 == 0:
+            if not is_integer(expression[i]):
+                return False
+            
+        else:
+            if not is_valid_operator(expression[i]):
+                return False
+        
+            if currentOperator == "":
+                currentOperator = expression[i]
+
+            elif currentOperator != expression[i]:
+                return False
+
+        count += 1
+
+    if expression[-1] != "=":
+        return False
+        
+    return True
+           
 def print_error_message() -> None:
     """
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
     """
     print("ERROR")
+
+
+print(is_valid_expression("1+2+3+4+5="))
+print(is_valid_expression("1*2*3*4*5="))
+print(is_valid_expression("1/2/3/4/5="))
+print(is_valid_expression("1-2-3-4-5="))
+print(is_valid_expression("1/2*3+2="))
