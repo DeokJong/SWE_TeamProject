@@ -15,7 +15,7 @@ def calculator():
         expression += user_input
 
         if user_input == '=':
-            if len(expression) <= 2:
+            if len(expression) <= 3:
                 print_error_message()
                 break
 
