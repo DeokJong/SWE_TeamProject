@@ -5,12 +5,12 @@
 # return the result.
 
 def multiplication_function(expression: str) -> int:
-    expression = expression.strip('=')  # Remove '='
-    number_list = expression.split('times')  # Divide expression to make a list
+    expression = expression.strip('=')  # remove '='
+    number_list = expression.split('*')  # divide expression to make a list
 
-    result = 1  # Initialize result variable to 1 for multiplication
-
-    for number in number_list:  # Multiply numbers repeatedly
+    result = 1  # initiate result variable with 1 for multiplication
+    
+    for number in number_list:  # multiply numbers repeatedly
         result *= int(number)
 
     return result
