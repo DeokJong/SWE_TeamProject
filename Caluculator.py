@@ -113,33 +113,33 @@ def addition_function(expression) -> int: # 덧셈 연산 수행
     expression = expression.strip('=') #remove '='
     number_list = expression.split('+') #divide expression to make list
 
-    reslut = int(0) # initiate reslut variable
+    result = int(0) # initiate result variable
     for number in number_list: # addition
-        reslut += int(number)
+        result += int(number)
 
-    return reslut 
+    return result 
 
 def subtract_function(expression) -> int: # 뺄샘 연산 수행
     expression = expression.strip('=') #remove '='
     number_list = expression.split('-') #divide expression to make list
 
-    reslut = int(number_list[0]) # initiate reslut variable
+    result = int(number_list[0]) # initiate result variable
     
     for number in number_list[1:]: # subtract
-        reslut -= int(number)
+        result -= int(number)
 
-    return reslut 
+    return result 
 
 def multiplication_function(expression) -> int: # 곱셈 연산 수행
     expression = expression.strip('=') #remove '='
     number_list = expression.split('*') #divide expression to make list
 
-    reslut = int(1) # initiate reslut variable
+    result = int(1) # initiate result variable
     
     for number in number_list: # multiplication
-        reslut *= int(number)
+        result *= int(number)
 
-    return reslut 
+    return result 
 
 if __name__ == "__main__":
     calculator()
