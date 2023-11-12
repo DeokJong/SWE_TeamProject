@@ -6,7 +6,7 @@
 #third, sum all the numbers in the list of numbers
 #fourth, return result
 
-def addiction_function(expression : str) -> int:
+def addition_function(expression : str) -> int:
     expression = expression.strip('=') #remove '='
     number_list = expression.split('+') #divide expression to make list
 
