@@ -26,7 +26,7 @@
         subtract_function(expression)
 
 - 곱하기 (*)
-        python
+        
         multiplication_function(expression: str) -> int
 
 ## 제한 사항
