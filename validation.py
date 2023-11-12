@@ -45,29 +45,24 @@ def is_valid_expression(expression : str) -> bool:
     """
     
     currentOperator:str = ""
-    count = 0
+    tokens = expression.replace('+', ' + ').replace('-', ' - ').replace('*', ' * ').replace('=', ' = ').split()
 
-    for i in range(len(expression) - 1):
-        if count % 2 == 0:
-            if not is_integer(expression[i]):
+    for i in range(len(tokens) - 1):
+        if i % 2 == 0:  # 피연산자 위치
+            if not is_integer(tokens[i]):
                 return False
             
-        else:
-            if not is_valid_operator(expression[i]):
+        else:  # 연산자 위치
+            if not is_valid_operator(tokens[i]):
                 return False
-        
+            
             if currentOperator == "":
-                currentOperator = expression[i]
+                currentOperator = tokens[i]
 
-            elif currentOperator != expression[i]:
+            elif currentOperator != tokens[i]:
                 return False
 
-        count += 1
-
-    if expression[-1] != "=":
-        return False
-        
-    return True
+    return tokens[-1] == "="
            
 def print_error_message() -> None:
     """
