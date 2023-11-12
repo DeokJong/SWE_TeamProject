@@ -10,9 +10,9 @@ def addiction_function(expression : str) -> int:
     expression = expression.strip('=') #remove '='
     number_list = expression.split('+') #divide expression to make list
 
-    reslut = int(0) # initiate reslut variable
+    result = int(0) # initiate reslut variable
     
     for number in number_list: # sum number repeatedly
-        reslut+=int(number)
+        result+=int(number)
 
-    return reslut 
+    return result 
