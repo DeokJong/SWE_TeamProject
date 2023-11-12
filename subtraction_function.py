@@ -3,7 +3,7 @@
 # 뺄셈 기능
 
 
-def subtract_function(expression):
+def subtraction_function(expression):
     # expression은 식이란 뜻으로 사용.
     # 받는식은 띄어쓰기 없이 한줄로 string으로 입력받으려 한다.
     # example: 5-2=, 5-6-1=
