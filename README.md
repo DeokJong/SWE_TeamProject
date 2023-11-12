@@ -26,6 +26,8 @@
         subtract_function(expression)
 
 - 곱하기 (*)
+        python
+        multiplication_function(expression: str) -> int
 
 ## 제한 사항
 - 피연산자는 정수만 가능합니다.
