@@ -1,16 +1,17 @@
 #201910083_니키 
+# Implementation of multiplication_function
+# divide expression to make a list of numbers.
+# multiply all the numbers in the list of numbers.
+# return the result.
 
-def calculate_product():
-    # multiplication problem
- 
-    user_input = input("Input a multiplication problem: ")
+def multiplication_function(expression: str) -> int:
+    expression = expression.strip('=')  # Remove '='
+    number_list = expression.split('times')  # Divide expression to make a list
 
-    if ' times ' in user_input:
-        # Extract the numbers 
-        operand1, operand2 = map(int, user_input.split(' times '))
+    result = 1  # Initialize result variable to 1 for multiplication
 
-        # calculate 
-        result = operand1 * operand2
-        print("The result of multiplying {} and {} is: {}".format(operand1, operand2, result))
-    else:
-        print("Wrong input")
+    for number in number_list:  # Multiply numbers repeatedly
+        result *= int(number)
+
+    return result
+
