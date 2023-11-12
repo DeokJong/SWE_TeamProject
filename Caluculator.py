@@ -21,7 +21,7 @@ def calculator():
                     result = multiplication_function(expression)
                 
                 if result is not None:
-                    print("=", result)
+                    print(result)
                 break
             else:
                 print_error_message()
