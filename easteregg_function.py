@@ -3,7 +3,6 @@
 def easteregg_function(variable):
     if variable == '777':
         print("Lucky Number!")
-        return True
 
 
 # def main():

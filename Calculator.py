@@ -12,6 +12,7 @@ def calculator():
     
     while True:
         user_input = input("User input: ")
+        easteregg_function(user_input)
         expression += user_input
 
         if user_input == '=':
@@ -35,9 +36,6 @@ def calculator():
             else:
                 print_error_message()
                 break
-
-        elif easteregg_function(user_input):
-            expression = expression[0 : len(expression)-3]
 
 if __name__ == "__main__":
     calculator()
