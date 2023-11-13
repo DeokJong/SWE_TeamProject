@@ -5,8 +5,8 @@
 # return the result.
 
 def multiplication_function(expression: str) -> int:
-    expression = expression.strip('=')  # remove '='
-    number_list = expression.split('*')  # divide expression to make a list
+    expression = expression.strip("= ")  # remove '='
+    number_list = expression.split(" * ")  # divide expression to make a list
 
     result = 1  # initiate result variable with 1 for multiplication
     

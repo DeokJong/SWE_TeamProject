@@ -7,9 +7,9 @@ def subtraction_function(expression):
     # expression은 식이란 뜻으로 사용.
     # 받는식은 띄어쓰기 없이 한줄로 string으로 입력받으려 한다.
     # example: 5-2=, 5-6-1=
-    expression = expression.strip('=')
+    expression = expression.strip("= ")
     # expression의 마지막 '='를 우선적으로 제거한다.
-    array_of_expression = expression.split('-')
+    array_of_expression = expression.split(" - ")
     # array_of_expression은 위의 식을
     # '-'를 기준으로 잘라서 만든 int Array 배열이다.
     result = int(array_of_expression[0])

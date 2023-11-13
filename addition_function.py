@@ -7,8 +7,8 @@
 #fourth, return result
 
 def addition_function(expression : str) -> int:
-    expression = expression.strip('=') #remove '='
-    number_list = expression.split('+') #divide expression to make list
+    expression = expression.strip("= ") #remove '='
+    number_list = expression.split(" + ") #divide expression to make list
 
     result = int(0) # initiate reslut variable
     
