@@ -19,11 +19,11 @@
 ## 지원 연산
 - 더하기 (+)
         
-        addiction_function(expression : str) -> int
+        addition_function(expression : str) -> int
 
 - 빼기 (-)
 
-        subtract_function(expression)
+        subtraction_function(expression)
 
 - 곱하기 (*)
         
