@@ -9,12 +9,13 @@
 - python 3.x
 
 ## 예시
-    15
-    -
-    3
-    -
-    10
-    = 2
+    User input: 15
+    User input: -
+    User input: 3
+    User input: -
+    User input: 10
+    User input: = 
+    output: 2
 
 ## 지원 연산
 - 더하기 (+)
