@@ -17,7 +17,7 @@ def calculator():
         expression += " "
 
         if user_input == '=':
-            if len(expression) <= 6:
+            if len(expression) <= 6 and '!' not in expression:
                 print_error_message()
                 break
 
@@ -30,7 +30,9 @@ def calculator():
                     result = subtraction_function(expression)
                 elif operator=="*":
                     result = multiplication_function(expression)
-                
+                elif operator=="!":
+                    result = 10000000
+                    
                 if result is not None:
                     print("output:", result)
                 break

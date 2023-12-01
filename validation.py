@@ -30,7 +30,7 @@ def is_valid_operator(operator : str) -> bool:
     - bool : 문자열이 유효한 연산자 (+, -, *)이면 True, 그렇지 않으면 False.
     """
    
-    return operator in ('+', '-', '*','=')
+    return operator in ('+', '-', '*','=','!')
 
 
 def is_valid_expression(expression : str) -> bool:
@@ -47,7 +47,7 @@ def is_valid_expression(expression : str) -> bool:
     currentOperator:str = ""
     tokens = expression.split(" ")
 
-    for i in range(len(tokens) - 1):
+    for i in range(len(tokens) - 2):
         if i % 2 == 0:  # 피연산자 위치
             if not is_integer(tokens[i]):
                 return False
@@ -59,12 +59,14 @@ def is_valid_expression(expression : str) -> bool:
             if currentOperator == "":
                 currentOperator = tokens[i]
 
-            if tokens[i]=="=":
-                return True
+            # if tokens[i]=="=":
+            #    return True
 
             elif currentOperator != tokens[i]:
                 return False
-           
+
+    return tokens[len(tokens) - 2] == '='
+
 def print_error_message() -> None:
     """
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
