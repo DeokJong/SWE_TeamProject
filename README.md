@@ -9,13 +9,13 @@
 - python 3.x
 
 ## 예시
-    User input: 15
-    User input: -
-    User input: 3
-    User input: -
-    User input: 10
-    User input: = 
-    output: 2
+    15
+    -
+    3
+    -
+    10
+    = 
+    2
 
 ## 지원 연산
 - 더하기 (+)
@@ -29,6 +29,9 @@
 - 곱하기 (*)
         
         multiplication_function(expression: str) -> int
+
+- 팩토리얼 (!)
+        factorial(expression: str) -> int
 
 ## 제한 사항
 - 피연산자는 정수만 가능합니다.
@@ -44,4 +47,4 @@
 ## 계산식 유효성 검사
 계산식이 유효한지 확인하기 위해 다음의 함수를 수행합니다.
 
-    is_valid_expression(expression : str) -> bool
+    is_valid_expression(expression : str, user_input : str) -> bool
