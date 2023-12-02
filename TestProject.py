@@ -5,7 +5,7 @@ from easteregg_function import easterEgg_function
 
 class ProjectTest(unittest.TestCase):
     def test_is_valid_expression(self):
-        self.assertTrue(is_valid_expression("1 +"))
+        self.assertFalse(is_valid_expression("1 +"))
         self.assertFalse(is_valid_expression("1 1 +"))
         self.assertFalse(is_valid_expression("+ 1"))
         self.assertFalse(is_valid_expression("-1 +"))

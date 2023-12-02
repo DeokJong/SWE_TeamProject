@@ -68,9 +68,13 @@ def is_valid_expression(expression: str) -> bool:
         if currentOperator == "!":
             if len(tokens) != 2:
                 return False
-            
+
             if int(tokens[0]) < 0:
                 return False
+
+    if len(tokens) % 2 == 0:
+        return False
+
     return True
 
 
@@ -81,15 +85,15 @@ def print_error_message(expression : str = None) -> None:
     if (expression == None):
         print("[SYSTEM] ERROR")
         return
-    
+
     # 팩토리얼인 경우
     tokens = expression.split(" ")  # list
-    if len(tokens) != 2:     
+    if len(tokens) != 2:
         print("[ERROR] Input Error")
         return
-    
+
     if int(tokens[0]) < 0:
-        print("[ERROR] Out Of Range")            
+        print("[ERROR] Out Of Range")
         return
 
 def getOperator(expression: str) -> str:
