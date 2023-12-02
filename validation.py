@@ -36,7 +36,7 @@ def is_valid_operator(operator: str) -> bool:
         return False
 
 
-def is_valid_expression(expression: str) -> bool:
+def is_valid_expression(expression: str, user_input:str = None) -> bool:
     """
     매개변수로 들어온 계산식이 유효한 계산식인지 확인합니다.
 
@@ -46,7 +46,9 @@ def is_valid_expression(expression: str) -> bool:
     Returns:
     - bool : 계산식이 유효하면 True, 그렇지 않으면 False.
     """
-
+    if len(expression) < 6 and user_input == '=':
+        return False
+    
     currentOperator: str = ""
     tokens = expression.split(" ")  # list
 
@@ -71,10 +73,7 @@ def is_valid_expression(expression: str) -> bool:
 
             if int(tokens[0]) < 0:
                 return False
-
-    if len(tokens) % 2 == 0:
-        return False
-
+            
     return True
 
 

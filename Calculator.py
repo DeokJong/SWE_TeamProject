@@ -20,15 +20,11 @@ def calculator():
 
         # (입력값이 '=' 또는 '!' 일 경우 연산 시작) or (식에다가 입력값 붙여넣기)
         if user_input == '=' or user_input == '!':
-            if len(expression) <= 6 and user_input == '=':
-                print_error_message()
-                return
-            
             expression = expression.rstrip()  # 문자열의 공백 제거
             if user_input == '!': expression += " !"  # 팩토리얼 인식을 위해 느낌표 붙이기
 
             # 유효성 검사 성공하면 연산 시작 그렇지 않으면 탈출.
-            if is_valid_expression(expression):
+            if is_valid_expression(expression, user_input):
                 operator = getOperator(expression)
 
                 if operator == "+":
