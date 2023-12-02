@@ -2,6 +2,7 @@ import unittest
 from validation import is_valid_expression, getOperator
 from easteregg_function import easterEgg_function
 
+
 class ProjectTest(unittest.TestCase):
     def test_is_valid_expression(self):
         self.assertTrue(is_valid_expression("1 +"))
@@ -18,6 +19,7 @@ class ProjectTest(unittest.TestCase):
         self.assertEqual(getOperator("1 - 2"), "-")
         self.assertEqual(getOperator("1 * 2"), "*")
         self.assertEqual(getOperator("1 !"), "!")
+
 
 if __name__ == '__main__':
     unittest.main()
