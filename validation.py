@@ -46,7 +46,7 @@ def is_valid_expression(expression: str, user_input:str = None) -> bool:
     Returns:
     - bool : 계산식이 유효하면 True, 그렇지 않으면 False.
     """
-    if len(expression) < 6 and user_input == '=':
+    if len(expression) < 5 and user_input == '=':
         return False
     
     currentOperator: str = ""
