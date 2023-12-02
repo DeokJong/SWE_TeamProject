@@ -31,6 +31,7 @@
         multiplication_function(expression: str) -> int
 
 - 팩토리얼 (!)
+
         factorial(expression: str) -> int
 
 ## 제한 사항
