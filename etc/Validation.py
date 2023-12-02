@@ -36,7 +36,7 @@ def is_valid_operator(operator: str) -> bool:
         return False
 
 
-def is_valid_expression(expression: str) -> bool:
+def is_valid_expression(expression: str, user_input:str = None) -> bool:
     """
     매개변수로 들어온 계산식이 유효한 계산식인지 확인합니다.
 
@@ -46,45 +46,54 @@ def is_valid_expression(expression: str) -> bool:
     Returns:
     - bool : 계산식이 유효하면 True, 그렇지 않으면 False.
     """
-
+    if len(expression) < 5 and user_input == '=':
+        return False
+    
     currentOperator: str = ""
     tokens = expression.split(" ")  # list
 
     for i in range(len(tokens)):
         if i % 2 == 0:  # 피연산자 위치
             if not is_integer(tokens[i]):
-                print_error_message()
                 return False
 
         else:  # 연산자 위치
             if not is_valid_operator(tokens[i]):
-                print_error_message()
                 return False
 
             if currentOperator == "":
                 currentOperator = tokens[i]
 
             elif currentOperator != tokens[i]:
-                print_error_message()
                 return False
 
         if currentOperator == "!":
             if len(tokens) != 2:
-                print("[Error] Input Error")
-                return False
-            if int(tokens[0]) < 0:
-                print("[Error] Out Of Range")
                 return False
 
+            if int(tokens[0]) < 0:
+                return False
+            
     return True
 
 
-def print_error_message() -> None:
+def print_error_message(expression : str = None) -> None:
     """
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
     """
-    print("[ERROR] Input Error")
+    if (expression == None):
+        print("[SYSTEM] ERROR")
+        return
 
+    # 팩토리얼인 경우
+    tokens = expression.split(" ")  # list
+    if len(tokens) != 2:
+        print("[ERROR] Input Error")
+        return
+
+    if int(tokens[0]) < 0:
+        print("[ERROR] Out Of Range")
+        return
 
 def getOperator(expression: str) -> str:
     tokens = expression.split(" ")
