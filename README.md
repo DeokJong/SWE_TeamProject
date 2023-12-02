@@ -37,7 +37,7 @@
 ## 이스터에그
 만약 사용자가 특정 숫자를 입력하면 이스터에그 함수를 호출하여 특별한 메시지를 출력합니다.
 
-    easteregg_function(variable)
+    easterEgg_function(variable)
 
 
 

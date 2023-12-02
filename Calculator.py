@@ -5,7 +5,7 @@ from addition_function import addition_function  # 진덕종 파트
 from subtraction_function import subtraction_function  # 조훈희 파트
 from Multiplication_function import multiplication_function  # 니키 파트
 from validation import is_valid_expression, print_error_message, getOperator  # 이재윤 파트
-from easteregg_function import easteregg_function  # 김혜정 파트
+from easteregg_function import easterEgg_function  # 김혜정 파트
 
 
 def calculator():
@@ -14,7 +14,7 @@ def calculator():
 
     while True:
         user_input = input("User input: ")
-        easteregg_function(user_input)
+        easterEgg_function(user_input)
 
         # 입력값이 '='일 경우 연산 시작
         if user_input == '=':
