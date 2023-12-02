@@ -1,6 +1,6 @@
 import unittest
-from Factorial import factorial
-from validation import is_valid_expression
+from CalculateFunction.Factorial import factorial
+from etc.Validation import is_valid_expression
 
 
 class TestFactorial(unittest.TestCase):

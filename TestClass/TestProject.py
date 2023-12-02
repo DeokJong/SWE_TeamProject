@@ -1,6 +1,6 @@
 import unittest
-from validation import is_valid_expression, getOperator
-from easteregg_function import easterEgg_function
+from etc.Validation import is_valid_expression, getOperator
+from etc.Easteregg_function import easterEgg_function
 
 
 class ProjectTest(unittest.TestCase):
