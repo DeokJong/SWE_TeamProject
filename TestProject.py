@@ -2,13 +2,12 @@ import unittest
 from validation import is_valid_expression, getOperator
 from easteregg_function import easterEgg_function
 
-
 class ProjectTest(unittest.TestCase):
     def test_is_valid_expression(self):
-        self.assertTrue(is_valid_expression("1 !"))
-        self.assertFalse(is_valid_expression("1 1 !"))
-        self.assertFalse(is_valid_expression("! 1"))
-        self.assertFalse(is_valid_expression("-1 !"))
+        self.assertTrue(is_valid_expression("1 +"))
+        self.assertFalse(is_valid_expression("1 1 +"))
+        self.assertFalse(is_valid_expression("+ 1"))
+        self.assertFalse(is_valid_expression("-1 +"))
 
     def test_easterEgg_function(self):
         self.assertTrue(easterEgg_function("777"))
