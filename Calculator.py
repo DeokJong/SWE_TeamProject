@@ -11,6 +11,7 @@ from Factorial import factorial
 
 def calculator():
     expression = ""
+    operator = ""
     result = None
 
     while True:
@@ -19,6 +20,10 @@ def calculator():
 
         # (입력값이 '=' 또는 '!' 일 경우 연산 시작) or (식에다가 입력값 붙여넣기)
         if user_input == '=' or user_input == '!':
+            if len(expression) <= 6 and user_input == '=':
+                print_error_message()
+                return
+            
             expression = expression.rstrip()  # 문자열의 공백 제거
             if user_input == '!': expression += " !"  # 팩토리얼 인식을 위해 느낌표 붙이기
 
@@ -40,6 +45,12 @@ def calculator():
                 break
 
             else:
+                if (user_input == '!'):
+                    print_error_message(expression)
+
+                else:
+                    print_error_message()
+                
                 break
         # 입력값이 '='이 아닐 경우
         else:
