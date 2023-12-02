@@ -1,3 +1,7 @@
+"""
+팩토리얼 연산에 대한 테스트케이스를 생성
+이는 TDD를 위해서임
+"""
 import unittest
 from CalculateFunction.Factorial import factorial
 from etc.Validation import is_valid_expression
@@ -14,6 +18,10 @@ class TestFactorial(unittest.TestCase):
         self.assertFalse(is_valid_expression("! !"))
         self.assertFalse(is_valid_expression("3 3 !"))
         self.assertFalse(is_valid_expression("! 3"))
+        self.assertFalse(is_valid_expression("-3 !"))
+        self.assertFalse(is_valid_expression("! !"))
+        self.assertFalse(is_valid_expression("-3 -3 !"))
+        self.assertFalse(is_valid_expression("! -3"))
 
     def test_factorial_zero(self):
         self.assertEqual(factorial("0 !"), 1)
@@ -29,6 +37,3 @@ class TestFactorial(unittest.TestCase):
     def test_factorial_negative(self):
         self.assertFalse(is_valid_expression("-3 !", "!"))
         self.assertFalse(is_valid_expression("-30 !", "!"))
-
-if __name__ == '__main__':
-    unittest.main()

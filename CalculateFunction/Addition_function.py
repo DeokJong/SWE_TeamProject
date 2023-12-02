@@ -2,7 +2,7 @@
 # implementation addiction_function
 #
 # First, remove '='.
-# second, divide expreesion to make number list
+# second, divide expression to make number list
 # third, sum all the numbers in the list of numbers
 # fourth, return result
 

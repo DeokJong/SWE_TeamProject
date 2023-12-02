@@ -1,6 +1,14 @@
-def factorial(expression : str) -> int:
-    expression_list = expression.split(" ")
-    max_number = int(expression_list[0])
+# 201916136 Deokjong Jin
+# implementation Factorial_function
+#
+# First, remove '='.
+# second, divide expression to make number list
+# third, calculate factorial
+# fourth, return result
+
+def factorial(expression: str) -> int:
+    number_list = expression.split(" ")
+    max_number = int(number_list[0])
     result = 1
 
     while max_number != 0:

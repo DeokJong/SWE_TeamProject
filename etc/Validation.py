@@ -30,13 +30,13 @@ def is_valid_operator(operator: str) -> bool:
     Returns:
     - bool : 문자열이 유효한 연산자 (+, -, *)이면 True, 그렇지 않으면 False.
     """
-    if operator in ('+', '-', '*', '!') :
+    if operator in ('+', '-', '*', '!'):
         return True
-    else :
+    else:
         return False
 
 
-def is_valid_expression(expression: str, user_input:str = None) -> bool:
+def is_valid_expression(expression: str, user_input: str = None) -> bool:
     """
     매개변수로 들어온 계산식이 유효한 계산식인지 확인합니다.
 
@@ -48,7 +48,7 @@ def is_valid_expression(expression: str, user_input:str = None) -> bool:
     """
     if len(expression) < 5 and user_input == '=':
         return False
-    
+
     currentOperator: str = ""
     tokens = expression.split(" ")  # list
 
@@ -73,11 +73,11 @@ def is_valid_expression(expression: str, user_input:str = None) -> bool:
 
             if int(tokens[0]) < 0:
                 return False
-            
+
     return True
 
 
-def print_error_message(expression : str = None) -> None:
+def print_error_message(expression: str = None) -> None:
     """
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
     """
@@ -94,6 +94,7 @@ def print_error_message(expression : str = None) -> None:
     if int(tokens[0]) < 0:
         print("[ERROR] Out Of Range")
         return
+
 
 def getOperator(expression: str) -> str:
     tokens = expression.split(" ")

@@ -7,7 +7,7 @@
 def multiplication_function(expression: str) -> int:
     number_list = expression.split(" * ")  # divide expression to make a list
 
-    result = 1  # initiate result variable with 1 for multiplication
+    result = int(1)  # initiate result variable with 1 for multiplication
 
     for number in number_list:  # multiply numbers repeatedly
         result *= int(number)

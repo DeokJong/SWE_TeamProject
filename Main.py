@@ -4,7 +4,7 @@
 from CalculateFunction.Addition_function import addition_function  # 진덕종 파트
 from CalculateFunction.Subtraction_function import subtraction_function  # 조훈희 파트
 from CalculateFunction.Multiplication_function import multiplication_function  # 니키 파트
-from etc.Validation import is_valid_expression, print_error_message,getOperator  # 이재윤 파트
+from etc.Validation import is_valid_expression, print_error_message, getOperator  # 이재윤 파트
 from etc.Easteregg_function import easterEgg_function  # 김혜정 파트
 from CalculateFunction.Factorial import factorial
 
