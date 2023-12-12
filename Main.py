@@ -16,7 +16,6 @@ def calculator():
 
     while True:
         user_input = input()
-        easterEgg_function(user_input)
 
         # (입력값이 '=' 또는 '!' 일 경우 연산 시작) or (식에다가 입력값 붙여넣기)
         if user_input == '=' or user_input == '!':
@@ -48,6 +47,9 @@ def calculator():
                     print_error_message()
 
                 break
+        # 이스터에그 입력
+        elif easterEgg_function(user_input):
+            break
         # 입력값이 '='이 아닐 경우
         else:
             expression += user_input
