@@ -1,8 +1,8 @@
 # 202116317 kim hye-jeong
 
 def easterEgg_function(variable):
-    if variable == '777':
-        print("[EVENT] Lucky Number!")
+    if variable == '7503':
+        print("[EVENT] 안녕! 7503은 사용할 수 없는 숫자야")
         return True
     elif variable == '1015':
         print("[EVENT] 전북대학교 개교기념일입니다.")
