@@ -9,7 +9,7 @@
 def subtraction_function(expression: str) -> int:
     number_list = expression.split(" - ")  # divide expression to make list
 
-    result = int(expression[0])  # initiate reslut variable
+    result = int(number_list[0])  # initiate reslut variable
 
     for number in number_list[1:]:  # subtract number repeatedly
         result -= int(number)
