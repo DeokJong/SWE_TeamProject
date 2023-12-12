@@ -40,7 +40,7 @@ class ProjectTest(unittest.TestCase):
         self.assertTrue(is_valid_expression("-1 + 1", "="))
 
     def test_easterEgg_function(self):
-        self.assertTrue(easterEgg_function("777"))
+        self.assertTrue(easterEgg_function("7503"))
         self.assertTrue(easterEgg_function("1015"))
         self.assertFalse(easterEgg_function("12345678912345678123456987"))
 
