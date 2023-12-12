@@ -82,7 +82,7 @@ def print_error_message(expression: str = None) -> None:
     유효하지 않은 계산식인 경우 오류 메시지를 출력합니다.
     """
     if (expression == None):
-        print("[SYSTEM] ERROR")
+        print("[SYSTEM] ERROR!")
         return
 
     # 팩토리얼인 경우
