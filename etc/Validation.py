@@ -83,17 +83,17 @@ def print_error_message(expression: str = None) -> None:
     """
     if (expression == None):
         print("[SYSTEM] ERROR!")
-        return
+        return "[SYSTEM] ERROR!"
 
     # 팩토리얼인 경우
     tokens = expression.split(" ")  # list
     if len(tokens) != 2:
         print("[ERROR] Input Error")
-        return
+        return "[ERROR] Input Error"
 
     if int(tokens[0]) < 0:
         print("[ERROR] Out Of Range")
-        return
+        return "[ERROR] Out Of Range"
 
 
 def getOperator(expression: str) -> str:
