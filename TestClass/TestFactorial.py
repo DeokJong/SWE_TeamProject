@@ -4,7 +4,7 @@
 """
 import unittest
 from CalculateFunction.Factorial import factorial
-from etc.Validation import is_valid_expression
+from etc.Validation import is_valid_expression, print_error_message
 
 
 class TestFactorial(unittest.TestCase):
@@ -22,6 +22,10 @@ class TestFactorial(unittest.TestCase):
         self.assertFalse(is_valid_expression("! !"))
         self.assertFalse(is_valid_expression("-3 -3 !"))
         self.assertFalse(is_valid_expression("! -3"))
+
+    def test_print_error_message(self):
+        self.assertEqual(print_error_message("3 5 !"), "[ERROR] Input Error")
+        self.assertEqual(print_error_message("-3 !"), "[ERROR] Out Of Range")
 
     def test_factorial_zero(self):
         self.assertEqual(factorial("0 !"), 1)
