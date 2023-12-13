@@ -12,7 +12,7 @@ class TestIsValidExpression(unittest.TestCase):
         self.assertFalse(is_valid_expression("3 +", "="))
         self.assertFalse(is_valid_expression("3 *", "="))
         self.assertFalse(is_valid_expression("3 -", "="))
-        self.assertFalse(is_valid_expression("3 5", "!"))
+        self.assertFalse(is_valid_expression("3 5 !", "!"))
         self.assertFalse(is_valid_expression("3 5", "="))
         self.assertFalse(is_valid_expression("+ 3", "="))
 
@@ -20,7 +20,7 @@ class TestIsValidExpression(unittest.TestCase):
         self.assertTrue(is_valid_expression("3 + 5", "="))
         self.assertTrue(is_valid_expression("3 * 5", "="))
         self.assertTrue(is_valid_expression("3 - 5", "="))
-        self.assertTrue(is_valid_expression("3", "!"))
+        self.assertTrue(is_valid_expression("3 !", "!"))
 
 class TestEasterEgg(unittest.TestCase):
     def test_easterEgg_function(self):
